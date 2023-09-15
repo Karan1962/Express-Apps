@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo list</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <div class="work_home_tab">
+        <a class="work_home" href="/">HOME</a>
+    </div>
+    
+    <div class="box" id="heading">
+        <h1> work </h1>
+    </div>
+    <div class="box">
+        <% for (var i = 0; i<newListItems.length; i++){ %>
+        <div class="item">
+         <input type="checkbox">  
+         <p><%= newListItems[i] %></p>
+        </div>
+        <%}%>
+
+     <form action="/work" method="post">
+            <input type="text" name="newItem" placeholder="new Item" autocomplete="off">
+            <button type="submit" name="button">+</button>
+     </form>
+
+    </div>
+    
+      
+      
+</body>
