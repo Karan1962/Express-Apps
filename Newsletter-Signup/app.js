@@ -4,7 +4,7 @@ const express = require("express");
 const bodyParser = require ("body-parser");
 const request = require ( "request");
 const https = require("https");
-const env = require("dotenv")
+require("dotenv").config();
 const apiKey=process.env.API_KEY;
 const app = express();
 app.use(express.static("public"));
